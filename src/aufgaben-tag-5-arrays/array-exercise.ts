@@ -117,3 +117,9 @@ console.log(futuramaQuoteToArraySentences)
 
 const futuramaQuoteToArrayString = futuramaQuoteToArraySentences.join()
 console.log(futuramaQuoteToArrayString)
+
+console.log("\n");
+console.log("Array-TS-Level-1_10 (split)");
+
+console.log("\n");
+console.log("Array-TS-Level-3_2");
