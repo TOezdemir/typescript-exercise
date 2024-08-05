@@ -24,7 +24,7 @@ console.log(getHighestNumber(numbers3));
 console.log("\n");
 console.log("%c Loops-TS-Level-1_11", "color: deeppink; background: white");
 
-function calculateSum(maxNumber: number[]): number {
+function calculateSum(maxNumber: number): number {
   //  Variable initialisieren, um eine Summe zu speichern!
   let sum: number = 0;
   // Hier die for-Schleife, um von 1 bis maxNumber zu zählen:
