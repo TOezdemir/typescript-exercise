@@ -14,13 +14,13 @@ function calculateTipAndSplit() {
   // Trinkgeldprozentsatz basierend auf Service-Level bestimmen
   let tipPercentage: number;
   switch (serviceLevel) {
-    case "poor":
+    case "bad":
       tipPercentage = 0.02;
       break;
     case "average":
       tipPercentage = 0.1;
       break;
-    case "excellent":
+    case "good":
       tipPercentage = 0.2;
       break;
     default:
@@ -62,7 +62,7 @@ function calculateTipAndSplit() {
     });
 }
 
-const calculateButton = document.querySelector("button"); // Button auswählen
+const calculateButton = document.querySelector("button");
 if (calculateButton) {
   calculateButton.addEventListener("click", calculateTipAndSplit);
 }
