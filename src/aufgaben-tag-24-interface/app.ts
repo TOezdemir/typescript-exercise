@@ -4,12 +4,14 @@ import Rectangle from "./classes/Rectangle";
 import Subordinate from "./classes/Subordinate";
 
 const circle1 = new Circle("Circle", "Red", 10, true);
+circle1.draw();
 const circle2 = new Circle("Circle!", "Blue", 15, true);
 const circle3 = new Circle("Circle!", "PURPLE", 20, true);
 
 console.log(circle1, circle2, circle3);
 
 const rectangle1 = new Rectangle(10, 15, "Rectangle", "Violet", false);
+rectangle1.draw();
 const rectangle2 = new Rectangle(20, 25, "Rectangle", "Teal", false);
 const rectangle3 = new Rectangle(30, 45, "Rectangle", "Green", false);
 
