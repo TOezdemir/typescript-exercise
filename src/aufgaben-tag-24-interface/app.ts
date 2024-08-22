@@ -28,3 +28,5 @@ console.log(subordinate1, subordinate2, subordinate3, manager1);
 manager1.addSubordinate(subordinate1);
 manager1.addSubordinate(subordinate2);
 manager1.addSubordinate(subordinate3);
+
+console.log("Hallo, Test!");
