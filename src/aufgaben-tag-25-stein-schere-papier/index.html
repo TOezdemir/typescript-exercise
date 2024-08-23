@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/steinscherepapier/src/img/videospielkonsole.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-TS Rock, Paper, Scissors</title>
+</head>
+<body>
+    <div class="Rounds">
+        <h2>How many rounds ?</h2>
+        <input class="fiveRounds" type="checkbox" value="5">5</input>
+        <input class="tenRounds" type="checkbox" value="10">10</input>
+        <input class="fifteenRounds" type="checkbox" value="15">15</input>
+        <input class="twentyRounds" type="checkbox" value="20">20</input>
+    </div>
+
+    <div>
+        <div class="playerScore">
+            <img src="#" alt="Me">
+            <p id="userScore">0</p> 
+        </div>
+        <div class="Output"></div>
+        <div class="computerScore">
+            <img src="#" alt="Computer">
+            <p id="computerScore">0</p> 
+        </div>
+    </div>
+
+    <h1>Let's Play</h1>
+
+    <div class="Choices">
+        <button class="Rock">Rock</button>
+        <button class="Paper">Paper</button>
+        <button class="Scissors">Scissors</button>   
+
+    </div>
+
+    <p>MAKE YOUR MOVE.</p>
+
+    <button id="reset">restart</button>
+    <script type="module" src="./main.ts"></script>
+</body>
+</html>
