@@ -101,10 +101,36 @@ function greetUser() {
   }
 }
 
-greetUser();
+// greetUser();
 console.log("\n");
 
 console.log(
   "%c ==== TS-ErrorHandling-Level-2_1 ====",
   "background: green; color: white"
 );
+
+function generateLottoNumber(): number {
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  if (randomNumber > 49) {
+    throw new Error("Ungültige Lottozahl (Zahl größer als 49!");
+  } else {
+    return randomNumber;
+  }
+}
+
+const lottoResults: number[] = [];
+
+while (lottoResults.length < 7) {
+  try {
+    const newNumber = generateLottoNumber();
+    if (!lottoResults.includes(newNumber)) {
+      lottoResults.push(newNumber);
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("Fehler: ", error.message);
+    }
+  }
+}
+
+console.log("Deine Lottozahlen: ", lottoResults);
