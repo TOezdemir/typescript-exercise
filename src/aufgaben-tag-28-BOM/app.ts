@@ -89,3 +89,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //! ========== Bom-TS-Level-1_4 ==========
 console.log("%c ==== Bom-TS-Level-1_4 ====", "color: orange");
+const countElement = document.getElementById("count") as HTMLDivElement;
+
+function countdown1() {
+  let count = 10;
+
+  const intervalId = setInterval(() => {
+    count--;
+    countElement.textContent = count.toString();
+
+    if (count === 0) {
+      clearInterval(intervalId);
+      const messageElement = document.querySelector(
+        ".message"
+      ) as HTMLDivElement;
+      messageElement.style.display = "none";
+    }
+  }, 1000);
+}
+window.onload = countdown;
+
+countdown1();
