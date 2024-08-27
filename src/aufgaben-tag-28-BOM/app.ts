@@ -1,55 +1,56 @@
+//! ========== Bom-TS-Level-1_1 ==========
 console.log("%c ==== Bom-TS-Level-1_1 ====", "color: orange");
 
-// let countdown = 10;
-// function countdownTimer() {
-//   console.log(countdown);
-//   countdown--;
+let countdown = 10;
+function countdownTimer() {
+  console.log(countdown);
+  countdown--;
 
-//   if (countdown < 1) {
-//     clearInterval(intervalId);
-//     console.log("Ahh.... endlich Feierabend!");
-//   }
-// }
-// const intervalId = setInterval(countdownTimer, 1000);
-// console.log("Start: Warten für 3 Sekunden...");
+  if (countdown < 1) {
+    clearInterval(intervalId);
+    console.log("Ahh.... endlich Feierabend!");
+  }
+}
+const intervalId = setInterval(countdownTimer, 1000);
+console.log("Start: Warten für 3 Sekunden...");
 
-// setTimeout(() => {
-//   console.log("Erledigt. Du hast 3 Sekunden verschwendet.");
-// }, 3000);
+setTimeout(() => {
+  console.log("Erledigt. Du hast 3 Sekunden verschwendet.");
+}, 3000);
 
-// countdownTimer();
+countdownTimer();
 
-console.log("%c ==== Bom-TS-Level-1_1 ====", "color: orange");
+//! ========== Bom-TS-Level-1_2 ==========
+console.log("%c ==== Bom-TS-Level-1_2 ====", "color: orange");
 
 function startCountdown() {
-  let countdownValue = 100; // Startwert des Countdowns
+  let countdownValue = 100;
 
-  // Holen Sie sich das Anzeigeelement und den Button
   const displayElement = document.querySelector(".zeit") as HTMLElement;
   const startButton = document.getElementById("btn") as HTMLButtonElement;
 
-  // Deaktivieren Sie den Button, um Mehrfachklicks zu verhindern
+  // Button nach Start deaktivieren:
   startButton.disabled = true;
 
-  // Intervall starten, das jede Sekunde ausgeführt wird
+  // Start des Zählens:
   const intervalId = setInterval(() => {
-    countdownValue--; // Countdown-Wert verringern
+    countdownValue--;
     displayElement.textContent = `${countdownValue}%`; // Anzeige aktualisieren
 
     if (countdownValue === 0) {
-      clearInterval(intervalId); // Intervall stoppen, wenn der Countdown 0 erreicht
+      clearInterval(intervalId);
       startButton.disabled = false; // Button wieder aktivieren
     }
-  }, 1000); // 1000 Millisekunden = 1 Sekunde
+  }, 1000);
 }
 
-// Event-Listener zum Button hinzufügen
 const startButton = document.getElementById("btn");
 if (startButton) {
   startButton.addEventListener("click", startCountdown);
 }
-
+//! ========== Bom-TS-Level-1_3 ==========
 console.log("%c ==== Bom-TS-Level-1_3 ====", "color: orange");
+
 function getBrowserAndDisplayInfo() {
   // 1. Variablen Vergeben & Informationen aus dem Navigator Objekt:
   const browserName = window.navigator.appName;
@@ -85,3 +86,6 @@ function getBrowserAndDisplayInfo() {
 document.addEventListener("DOMContentLoaded", () => {
   getBrowserAndDisplayInfo();
 });
+
+//! ========== Bom-TS-Level-1_4 ==========
+console.log("%c ==== Bom-TS-Level-1_4 ====", "color: orange");
