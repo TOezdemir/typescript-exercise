@@ -100,9 +100,7 @@ function countdown1() {
 
     if (count === 0) {
       clearInterval(intervalId);
-      const messageElement = document.querySelector(
-        ".message"
-      ) as HTMLDivElement;
+      const messageElement = document.querySelector(".message") as HTMLDivElement; 
       messageElement.style.display = "none";
     }
   }, 1000);
