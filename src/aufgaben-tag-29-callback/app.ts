@@ -85,3 +85,46 @@ console.log(endResult);
 
 console.log("\n");
 console.log("%c callback-TS-Level-2_1", "color: red");
+
+const button = document.getElementById("randomButton") as HTMLButtonElement;
+if (button) {
+  button.addEventListener("click", () => {
+    const functions = [randomNumber, randomText, randomBoolean, randomEmoji];
+    const randomFN = functions[Math.floor(Math.random() * functions.length)];
+    updateHeadline(randomFN);
+  });
+}
+function updateHeadline(randomiseHTwo: () => string): void {
+  const headlineElement = document.getElementById(
+    "headline"
+  ) as HTMLHeadElement;
+  if (headlineElement) {
+    headlineElement.innerText = randomiseHTwo();
+  }
+}
+
+function randomNumber(): string {
+  const randonNum = Math.floor(Math.random() * 100);
+  return randonNum.toString();
+}
+
+function randomText(): string {
+  const texts = [
+    "Welcome to Fyrestone! I am CL4P-TP, you may call me by my locally designated name, 'Claptrap'. ",
+    "No no no no no, old long johnson...",
+    "Spooky Scary Sceletons, bringing shivers down your spine...",
+  ];
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  return texts[randomIndex];
+}
+
+function randomBoolean(): string {
+  const randomBool = Math.random() < 0.5;
+  return randomBool.toString();
+}
+
+function randomEmoji(): string {
+  const emojis = ["🍕", "🐡", "🤡", "🥙", "🐦‍", "🐵", "🦷"];
+  const randomIndex = Math.floor(Math.random() * emojis.length);
+  return emojis[randomIndex];
+}
