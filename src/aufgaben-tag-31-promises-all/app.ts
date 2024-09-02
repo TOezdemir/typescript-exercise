@@ -49,14 +49,14 @@ const greetings = ["Togali", "Bobbo", "Rumpelkumpel"].map((name) => {
 
 console.log("\n");
 console.log(
-  "%c callback-TS-Level-2-_2",
+  "%c callback-TS-Level-2_2",
   "color: orange; background-color: white"
 );
 
 function processData(
   numbers: number[],
   absteigendSortieren: (numbersArray1: number[]) => number[],
-  summenVerdoppeln: (numbersArray2: []) => number[]
+  summenVerdoppeln: (numbersArray2: number[]) => number[]
 ): Map<number, string> {
   const absteigendArray = absteigendSortieren(numbers);
   const dopplerArray = summenVerdoppeln(absteigendArray);
@@ -68,7 +68,7 @@ function processData(
   return ergebnisMap;
 }
 
-function absteigendSortieren(numbersArray1: []): number[] {
+function absteigendSortieren(numbersArray1: number[]): number[] {
   return [...numbersArray1].sort((a, b) => b - a);
 }
 
