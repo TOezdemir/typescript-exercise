@@ -27,6 +27,6 @@ const readOnlyBook2: IReadOnlyBook = {
   publishingYear: "2024",
 };
 
-readOnlyBook2.author = "Obi Wan";
+// readOnlyBook2.author = "Obi Wan";
 
 console.log(readOnlyBook2);
