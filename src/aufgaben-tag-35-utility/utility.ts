@@ -64,11 +64,15 @@ for (let esel = 0; esel < 5; esel++) {
       console.log(`${esel}: Gus`);
     } else if (esel === 2) {
       console.log(`${esel}: Rosie`);
+    } else if (esel === 3) {
+      console.log(`${esel}: Coco`);
+    } else if (esel === 4) {
+      console.log(`${esel}: Jasper`);
     }
   }
 }
 
-const donkeyRecord: Record<Donkey, IDonkey> = {
+const donkeys: Record<Donkey, IDonkey> = {
   [Donkey.Daisy]: {
     name: Donkey.Daisy,
     age: 3,
@@ -100,5 +104,13 @@ const donkeyRecord: Record<Donkey, IDonkey> = {
     favouriteFood: "Milk of 1000 Cows",
   },
 };
-console.log(donkeyRecord);
-console.log(Donkey.Gus);
+for (const donkeyKey in donkeys) {
+  if (donkeys.hasOwnProperty(donkeyKey)) {
+    const donkey: IDonkey = donkeys[donkeyKey as unknown as Donkey];
+    console.log(`Name: ${Donkey[donkey.name]}`);
+    console.log(`Alter: ${donkey.age}`);
+    console.log(`Flauschigkeit: ${donkey.fluffyness}`);
+    console.log(`Lieblingsessen: ${donkey.favouriteFood}`);
+    console.log("-----"); // Trennlinie
+  }
+}
