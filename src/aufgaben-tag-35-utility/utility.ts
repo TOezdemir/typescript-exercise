@@ -106,6 +106,7 @@ const donkeys: Record<Donkey, IDonkey> = {
 };
 for (const donkeyKey in donkeys) {
   if (donkeys.hasOwnProperty(donkeyKey)) {
+    // donkeyKey ist unknown und wandeln ihn zu Donkey um
     const donkey: IDonkey = donkeys[donkeyKey as unknown as Donkey];
     console.log(`Name: ${Donkey[donkey.name]}`);
     console.log(`Alter: ${donkey.age}`);
